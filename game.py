@@ -36,3 +36,13 @@ def check_match(board,turns):
         return True
     else:
         return False
+# Function to get input
+def get_input():
+    while True:
+        print("Enter your side" )
+        inputs = input()
+        if inputs == 'tl' or inputs == 'tm' or inputs == 'tr' or inputs == 'ml' or inputs == 'mm' or inputs == 'mr' or inputs == 'bl' or inputs == 'bm' or inputs == 'br':
+            return inputs
+            break
+        else:
+            continue
