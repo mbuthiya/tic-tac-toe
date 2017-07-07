@@ -41,8 +41,27 @@ def get_input():
     while True:
         print("Enter your side" )
         inputs = input()
+        # Check for the keywords
         if inputs == 'tl' or inputs == 'tm' or inputs == 'tr' or inputs == 'ml' or inputs == 'mm' or inputs == 'mr' or inputs == 'bl' or inputs == 'bm' or inputs == 'br':
             return inputs
             break
         else:
             continue
+# Set turns and  maximum possible plays
+turn = 'X'
+
+for i in range(9):
+
+
+    if check_match(the_board,turn):
+        print(f"player {turn} has won")
+        break
+    else:
+        user_input = get_input()
+        the_board[user_input] = turn
+        define_board(the_board)
+
+        if turn == 'X':
+            turn = 'O'
+        else:
+            turn == "X"
