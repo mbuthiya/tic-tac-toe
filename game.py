@@ -16,3 +16,23 @@ def define_board(board):
     print(middle_side)
     print("-" * length)
     print(bottom_side)
+
+def check_match(board,turns):
+    #  Checking rows
+    check_top = board['tl'] == turns and board['tm'] == turns and  board['tr'] == turns
+    check_middle = board['ml'] == turns and board['mm'] == turns and board['mr'] == turns
+    check_bottom = board['bl'] == turns and board['bm'] == turns and board['br'] == turns
+
+    #  Checking columns
+    check_left = board['tl'] == turns and  board['ml'] == turns and board['bl'] == turns
+    check_middle = board['tm'] == turns and  board['mm'] == turns and board['bm'] == turns
+    check_right = board['tr'] == turns and  board['mr'] == turns and board['br'] == turns
+
+    # checking diagonals
+    front_diagonal = board['bl'] == turns and board['mm'] == turns and board['tr'] == turns
+    back_diagonal =  board['tl'] == turns and board['mm'] == turns and board['br'] == turns
+
+    if check_top or check_middle or check_bottom or check_left or check_middle or check_right or front_diagonal or back_diagonal:
+        return True
+    else:
+        return False
