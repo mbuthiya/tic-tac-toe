@@ -3,6 +3,15 @@
  My **First** Command line game Its Tic Tac Toe.
 
 ```python
- print(awesomeness)
+ print("awesomeness")
+ ```
+ ```python
+ """
+      |     x   |  O
+ -----|---------|--------
+      |     x   |  O
+ -----|---------|--------
+
+ """
  ```
 ### I am Learning Dictionaries
